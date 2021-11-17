@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).'/vendor/autoload.php';
-require __DIR__.'/Container15pmxjb/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerIP3b8pR/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -41,12 +41,14 @@ $classes[] = 'App\Controller\Admin\ProductCrudController';
 $classes[] = 'App\Controller\CartController';
 $classes[] = 'App\Controller\HomeController';
 $classes[] = 'App\Controller\ProductController';
+$classes[] = 'App\Controller\RegistrationController';
 $classes[] = 'App\Controller\SecurityController';
 $classes[] = 'App\Form\AddToCartType';
 $classes[] = 'App\Form\CartItemType';
 $classes[] = 'App\Form\CartType';
 $classes[] = 'App\Form\EventListener\ClearCartListener';
 $classes[] = 'App\Form\EventListener\RemoveCartItemListener';
+$classes[] = 'App\Form\RegistrationFormType';
 $classes[] = 'App\Manager\CartManager';
 $classes[] = 'App\Storage\CartSessionStorage';
 $classes[] = 'App\Factory\OrderFactory';
@@ -433,10 +435,10 @@ $classes[] = 'Symfony\Bundle\FrameworkBundle\Secrets\DotenvVault';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\Secrets\SodiumVault';
 $classes[] = 'Symfony\Component\Security\Http\Firewall\AccessListener';
 $classes[] = 'Symfony\Component\Security\Http\AccessMap';
-$classes[] = 'Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener';
-$classes[] = 'Symfony\Component\Security\Guard\Firewall\GuardAuthenticationListener';
 $classes[] = 'Symfony\Component\Security\Guard\GuardAuthenticatorHandler';
 $classes[] = 'Symfony\Component\Security\Http\Session\SessionAuthenticationStrategy';
+$classes[] = 'Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener';
+$classes[] = 'Symfony\Component\Security\Guard\Firewall\GuardAuthenticationListener';
 $classes[] = 'Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager';
 $classes[] = 'Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider';
 $classes[] = 'Symfony\Component\Security\Guard\Provider\GuardAuthenticationProvider';
