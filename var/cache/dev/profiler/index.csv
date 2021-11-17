@@ -228,3 +228,7 @@ db23fe,127.0.0.1,GET,https://localhost:8000/login,1637175814,,200
 64ede2,127.0.0.1,GET,https://localhost:8000/login,1637175815,,200
 e254d2,127.0.0.1,GET,https://localhost:8000/logout,1637175817,,302
 0dc9ac,127.0.0.1,GET,https://localhost:8000/,1637175817,,200
+329fd0,127.0.0.1,GET,https://localhost:8000/login,1637176684,,200
+270934,127.0.0.1,GET,https://localhost:8000/login,1637176686,,200
+9ab0bf,127.0.0.1,GET,https://localhost:8000/register,1637176690,,200
+229842,127.0.0.1,GET,https://localhost:8000/register,1637176692,,200
