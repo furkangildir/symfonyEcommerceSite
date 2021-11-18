@@ -18,6 +18,7 @@ return [
     'admin' => [[], ['_controller' => 'App\\Controller\\Admin\\DashboardController::index'], [], [['text', '/admin']], [], []],
     'cart' => [[], ['_controller' => 'App\\Controller\\CartController::index'], [], [['text', '/cart']], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], []],
+    'order' => [[], ['_controller' => 'App\\Controller\\OrderController::index'], [], [['text', '/order']], [], []],
     'product.detail' => [['id'], ['_controller' => 'App\\Controller\\ProductController::index'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/product']], [], []],
     'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],

@@ -6,9 +6,11 @@ use App\Repository\ProductRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=ProductRepository::class)
+ * @Vich\Uploadable()
  */
 class Product
 {
@@ -44,9 +46,26 @@ class Product
      */
     private $user;
 
+     /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $thumbnail;
+
+    /**
+     * @Vich\UploadableField(mapping="thumbnails", fileNameProperty="thumbnail")
+     */
+    private $thumbnailFile;
+
+    /**
+     * ORM\Column(type="datetime")
+     * @var \DateTime
+     */
+    private $updatedAt;
+
     public function __construct()
     {
         $this->categories = new ArrayCollection();
+        $this->updatedAt=new \DateTime();
     }
 
     public function getId(): ?int
@@ -125,4 +144,59 @@ class Product
 
         return $this;
     }
+
+      /**
+     * @return mixed
+     */ 
+    public function getThumbnailFile()
+    {
+        return $this->thumbnailFile;
+    }
+
+    /**
+     * @param mixed $thumbnailFile
+     */ 
+    public function setThumbnailFile($thumbnailFile):void
+    {
+        $this->thumbnailFile = $thumbnailFile;
+        
+        if($thumbnailFile)
+        {
+                $this->updatedAt=new \DateTime();
+        }
+        
+    }
+
+
+    /**
+     * @return mixed
+     */ 
+    public function getThumbnail()
+    {
+        return $this->thumbnail;
+    }
+
+    /**
+     * @param mixed $thumbnail
+     */ 
+    public function setThumbnail($thumbnail):void
+    {
+        $this->thumbnail = $thumbnail;
+
+    }
+
+   
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt):self
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
 }

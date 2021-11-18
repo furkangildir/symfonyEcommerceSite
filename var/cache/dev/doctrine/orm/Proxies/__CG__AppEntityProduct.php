@@ -66,10 +66,10 @@ class Product extends \App\Entity\Product implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'name', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'description', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'price', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'categories'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'name', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'description', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'price', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'categories', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'user', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'thumbnail', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'thumbnailFile', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'updatedAt'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'name', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'description', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'price', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'categories'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'name', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'description', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'price', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'categories', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'user', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'thumbnail', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'thumbnailFile', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'updatedAt'];
     }
 
     /**
@@ -288,6 +288,94 @@ class Product extends \App\Entity\Product implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeCategory', [$category]);
 
         return parent::removeCategory($category);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getUser(): ?\App\Entity\User
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUser', []);
+
+        return parent::getUser();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setUser(?\App\Entity\User $user): \App\Entity\Product
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUser', [$user]);
+
+        return parent::setUser($user);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getThumbnailFile()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getThumbnailFile', []);
+
+        return parent::getThumbnailFile();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setThumbnailFile($thumbnailFile): void
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setThumbnailFile', [$thumbnailFile]);
+
+        parent::setThumbnailFile($thumbnailFile);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getThumbnail()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getThumbnail', []);
+
+        return parent::getThumbnail();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setThumbnail($thumbnail): void
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setThumbnail', [$thumbnail]);
+
+        parent::setThumbnail($thumbnail);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUpdatedAt', []);
+
+        return parent::getUpdatedAt();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt): \App\Entity\Product
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUpdatedAt', [$updatedAt]);
+
+        return parent::setUpdatedAt($updatedAt);
     }
 
 }

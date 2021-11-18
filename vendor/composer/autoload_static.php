@@ -20,8 +20,8 @@ class ComposerStaticInitc6b7f06277fb5367dc1e38e461f7f967
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         '92c8763cd6170fce6fcfe7e26b4e8c10' => __DIR__ . '/..' . '/symfony/phpunit-bridge/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
-        '09f6b20656683369174dd6fa83b7e5fb' => __DIR__ . '/..' . '/symfony/polyfill-uuid/bootstrap.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
+        '09f6b20656683369174dd6fa83b7e5fb' => __DIR__ . '/..' . '/symfony/polyfill-uuid/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
     );
 
@@ -33,6 +33,10 @@ class ComposerStaticInitc6b7f06277fb5367dc1e38e461f7f967
         'W' => 
         array (
             'Webmozart\\Assert\\' => 17,
+        ),
+        'V' => 
+        array (
+            'Vich\\UploaderBundle\\' => 20,
         ),
         'T' => 
         array (
@@ -127,6 +131,7 @@ class ComposerStaticInitc6b7f06277fb5367dc1e38e461f7f967
         'M' => 
         array (
             'Monolog\\' => 8,
+            'Metadata\\' => 9,
         ),
         'L' => 
         array (
@@ -176,6 +181,10 @@ class ComposerStaticInitc6b7f06277fb5367dc1e38e461f7f967
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'Vich\\UploaderBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vich/uploader-bundle/src',
         ),
         'Twig\\Extra\\TwigExtraBundle\\' => 
         array (
@@ -504,6 +513,10 @@ class ComposerStaticInitc6b7f06277fb5367dc1e38e461f7f967
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'Metadata\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jms/metadata/src',
         ),
         'Laminas\\Code\\' => 
         array (
