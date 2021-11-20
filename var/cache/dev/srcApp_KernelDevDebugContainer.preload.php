@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).'/vendor/autoload.php';
-require __DIR__.'/Container68NFoCM/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerFeaIRqY/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -38,6 +38,8 @@ $classes[] = 'Symfony\Component\DependencyInjection\ServiceLocator';
 $classes[] = 'App\Command\RemoveExpiredCartsCommand';
 $classes[] = 'App\Controller\Admin\CategoryCrudController';
 $classes[] = 'App\Controller\Admin\DashboardController';
+$classes[] = 'App\Controller\Admin\OrderCrudController';
+$classes[] = 'App\Controller\Admin\OrderItemCrudController';
 $classes[] = 'App\Controller\Admin\ProductCrudController';
 $classes[] = 'App\Controller\CartController';
 $classes[] = 'App\Controller\HomeController';
@@ -50,6 +52,7 @@ $classes[] = 'App\Form\CartItemType';
 $classes[] = 'App\Form\CartType';
 $classes[] = 'App\Form\EventListener\ClearCartListener';
 $classes[] = 'App\Form\EventListener\RemoveCartItemListener';
+$classes[] = 'App\Form\OrderType';
 $classes[] = 'App\Form\RegistrationFormType';
 $classes[] = 'App\Manager\CartManager';
 $classes[] = 'App\Storage\CartSessionStorage';
@@ -60,8 +63,8 @@ $classes[] = 'App\Repository\OrderRepository';
 $classes[] = 'App\Repository\ProductRepository';
 $classes[] = 'App\Repository\UserRepository';
 $classes[] = 'App\Security\CustomAuthAuthenticator';
+$classes[] = 'App\Subscribers\OrderItemSubscriber';
 $classes[] = 'App\Subscribers\ProductSubscriber';
-$classes[] = 'Symfony\Component\Security\Core\Security';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Dbal\ManagerRegistryAwareConnectionProvider';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Registry';
 $classes[] = 'Doctrine\DBAL\Tools\Console\Command\RunSqlCommand';
@@ -480,6 +483,7 @@ $classes[] = 'Symfony\Component\Security\Http\Firewall\LogoutListener';
 $classes[] = 'Symfony\Component\Security\Http\Logout\DefaultLogoutSuccessHandler';
 $classes[] = 'Symfony\Component\Security\Http\Logout\CsrfTokenClearingLogoutHandler';
 $classes[] = 'Symfony\Component\Security\Http\Logout\SessionLogoutHandler';
+$classes[] = 'Symfony\Component\Security\Core\Security';
 $classes[] = 'Symfony\Component\Security\Http\Logout\LogoutUrlGenerator';
 $classes[] = 'Symfony\Component\Security\Core\Encoder\UserPasswordEncoder';
 $classes[] = 'Symfony\Component\Security\Http\RememberMe\ResponseListener';

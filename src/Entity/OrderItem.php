@@ -37,6 +37,11 @@ class OrderItem
      */
     private $orderRef;
 
+     /**
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="orderItems")
+     */
+    private $user;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -98,5 +103,17 @@ class OrderItem
     public function getTotal(): float
     {
         return $this->getProduct()->getPrice() * $this->getQuantity();
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
+
+        return $this;
     }
 }

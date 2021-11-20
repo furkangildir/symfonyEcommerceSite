@@ -43,6 +43,11 @@ class User implements UserInterface
      */
     private $products;
 
+     /**
+     * @ORM\OneToMany(targetEntity="OrderItem", mappedBy="user")
+     */
+    private $orderItems;
+
     /**
      * @ORM\Column(type="string", length=255)
      */
@@ -52,6 +57,7 @@ class User implements UserInterface
     {
         $this->products = new ArrayCollection();
         $this->roles=['ROLE_USER'];
+        $this->orderItems = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -181,4 +187,36 @@ class User implements UserInterface
 
         return $this;
     }
+
+    /**
+     * @return Collection|OrderItem[]
+     */
+    public function getOrderItems(): Collection
+    {
+        return $this->orderItems;
+    }
+
+    public function addOrderItem(OrderItem $orderItem): self
+    {
+        if (!$this->orderItems->contains($orderItem)) {
+            $this->orderItems[] = $orderItem;
+            $orderItem->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeOrderItem(OrderItem $orderItem): self
+    {
+        if ($this->orderItems->removeElement($orderItem)) {
+            // set the owning side to null (unless already changed)
+            if ($orderItem->getUser() === $this) {
+                $orderItem->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    
 }

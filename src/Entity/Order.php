@@ -47,6 +47,8 @@ class Order
      */
     private $updatedAt;
 
+    
+
     public function __construct()
     {
         $this->items = new ArrayCollection();
@@ -159,4 +161,6 @@ class Order
 
         return $this;
     }
+
+    
 }

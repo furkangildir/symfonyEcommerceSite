@@ -66,10 +66,10 @@ class User extends \App\Entity\User implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\User' . "\0" . 'id', '' . "\0" . 'App\\Entity\\User' . "\0" . 'email', '' . "\0" . 'App\\Entity\\User' . "\0" . 'roles', '' . "\0" . 'App\\Entity\\User' . "\0" . 'password', '' . "\0" . 'App\\Entity\\User' . "\0" . 'products', '' . "\0" . 'App\\Entity\\User' . "\0" . 'lastname'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\User' . "\0" . 'id', '' . "\0" . 'App\\Entity\\User' . "\0" . 'email', '' . "\0" . 'App\\Entity\\User' . "\0" . 'roles', '' . "\0" . 'App\\Entity\\User' . "\0" . 'password', '' . "\0" . 'App\\Entity\\User' . "\0" . 'products', '' . "\0" . 'App\\Entity\\User' . "\0" . 'orderItems', '' . "\0" . 'App\\Entity\\User' . "\0" . 'lastname'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\User' . "\0" . 'id', '' . "\0" . 'App\\Entity\\User' . "\0" . 'email', '' . "\0" . 'App\\Entity\\User' . "\0" . 'roles', '' . "\0" . 'App\\Entity\\User' . "\0" . 'password', '' . "\0" . 'App\\Entity\\User' . "\0" . 'products', '' . "\0" . 'App\\Entity\\User' . "\0" . 'lastname'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\User' . "\0" . 'id', '' . "\0" . 'App\\Entity\\User' . "\0" . 'email', '' . "\0" . 'App\\Entity\\User' . "\0" . 'roles', '' . "\0" . 'App\\Entity\\User' . "\0" . 'password', '' . "\0" . 'App\\Entity\\User' . "\0" . 'products', '' . "\0" . 'App\\Entity\\User' . "\0" . 'orderItems', '' . "\0" . 'App\\Entity\\User' . "\0" . 'lastname'];
     }
 
     /**
@@ -354,6 +354,39 @@ class User extends \App\Entity\User implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLastname', [$lastname]);
 
         return parent::setLastname($lastname);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getOrderItems(): \Doctrine\Common\Collections\Collection
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getOrderItems', []);
+
+        return parent::getOrderItems();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addOrderItem(\App\Entity\OrderItem $orderItem): \App\Entity\User
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addOrderItem', [$orderItem]);
+
+        return parent::addOrderItem($orderItem);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeOrderItem(\App\Entity\OrderItem $orderItem): \App\Entity\User
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeOrderItem', [$orderItem]);
+
+        return parent::removeOrderItem($orderItem);
     }
 
 }
