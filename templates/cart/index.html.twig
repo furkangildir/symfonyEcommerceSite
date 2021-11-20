@@ -1,16 +1,6 @@
 {% extends 'base.html.twig' %}
-{% block header %}
-{% block title %}Cart{% endblock %}
-    <nav class="navbar navbar-dark bg-dark sticky-top">
-        {# ... #}
-        <div class="navbar-nav">
-            <a href="{{ path('cart') }}" class="btn btn-light">
-                Cart
-            </a>
-        </div>
-    </nav>
-{% endblock %}
-{% block body %}
+
+{% block body % }
  <div class="container mt-4">
         <h1>Your Cart</h1>
         {% if cart.items.count > 0 %}
