@@ -1,7 +1,7 @@
 MNM Shop
 ==========
 
-This repository contains all the code about the tutorial: Building a Shopping Cart with "Symfony 4.4". 
+This repository contains all the code about the tutorial: Building a E-commerce Site with "Symfony 4.4". 
 
 !['Shopping Cart View'](img/MNMShop.png)
 
