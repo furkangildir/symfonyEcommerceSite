@@ -20,7 +20,7 @@ Getting started
 **Cloning the repository**
 
 ```
-$ git clone https://github.com/CodingBootcampTurkey/GraduationProject-furkangildir.git
+https://github.com/furkangildir/symfonyEcommerceSite.git
 $ cd symfonyEcommerceSite/
 ```
 
